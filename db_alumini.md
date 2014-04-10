@@ -12,6 +12,7 @@ BUSSINESS RULES
 	*ALUMNI are passouts of institute
 	*ALUMNI maybe working with more than one organisation
 	*REUNIONS may be organised for more than one course
+	*QUESTION have more than one ANSWER
 		
 ALUM_PERSONAL_INFO   //Alumni personal info is stored in this table
 ==================
