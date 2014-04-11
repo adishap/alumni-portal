@@ -10,7 +10,7 @@ CONVENTION USED
 BUSSINESS RULES
 ===============
 	*ALUMNI are passouts of institute
-	*ALUMNI maybe working with more than one organisation
+	*ALUMNI may be working with more than one organisation
 	*REUNIONS may be organised for more than one course
 	*QUESTION have more than one ANSWER
 		
