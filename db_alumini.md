@@ -30,8 +30,7 @@ ALUM_PERSONAL_INFO   //Alumni personal info is stored in this table
 	*country_Code
 	*email_Id
 	*phone_No
-	*pswrd
-
+	
 ALUM_COLLEGE_INFO  //All college related info of an alum is stored in this table
 =================
 	*alum_Id
@@ -55,7 +54,6 @@ ADMIN_INFO      //this portal has an admin whose info is stored in this table
 ==========
 	*admin_Id
 	*name
-	*password
 	*admin_Designation
 	*mail_Id
 	*phone_No
@@ -124,6 +122,12 @@ POST_JOB  //any job that is posted by any alum
 	*contact_Details
 	*discription
 	
+LOGIN  //will contain user name and password
+=====
+	*person_Id
+	*username
+	*pass
+	
 
 	 // until system is not connected to existing IIPS system, which allow login facility to students/teachers we need to maintain infos as we have some features for students and teachers.
 	
@@ -134,13 +138,11 @@ STUDENTS_INFO
 	*last_Name
 	*year_Of_Joining
 	*course
-	*password
-	
+		
 FACULTY_INFO
 =============
 	*faculty_Id
 	*full_Name
 	*related_Fields   //what are the fields a faculty teaches
 	*designation
-	*password
-	
+		
