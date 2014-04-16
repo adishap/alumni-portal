@@ -1,5 +1,5 @@
-***ALUMNI PORTAL DATABASE DOCUMENTATION***
-   ====================================
+ALUMNI PORTAL DATABASE DOCUMENTATION
+====================================
 
 CONVENTION USED
 ===============
