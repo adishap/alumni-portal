@@ -53,7 +53,8 @@ LAST_JOB   //last job of alum
 ADMIN_INFO      //this portal has an admin whose info is stored in this table
 ==========
 	*admin_Id
-	*name
+	*first_Name
+	*last_Name
 	*admin_Designation
 	*mail_Id
 	*phone_No
@@ -138,11 +139,16 @@ STUDENTS_INFO
 	*last_Name
 	*year_Of_Joining
 	*course
+	*email
+	*phone
 		
 FACULTY_INFO
 =============
 	*faculty_Id
-	*full_Name
+	*first_Name
+	*last_Name
 	*related_Fields   //what are the fields a faculty teaches
 	*designation
+	*email
+	*phone
 		

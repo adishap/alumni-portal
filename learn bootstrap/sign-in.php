@@ -8,7 +8,7 @@
     <meta name="author" content="">
     
  	
-    <title>Flashback</title>
+    <title>Sign-in</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,11 +50,11 @@
                 <li class="dropdown">
                   <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="sign-in.php">Sign In</a></li>
+                    <li  class="active"><a href="sign-in.php">Sign In</a></li>
                     <li><a href="register.php">Sign up</a></li>
                     <li><a href="#">Update Profile</a></li></ul>
                 </li>
-                <li   class="active"><a href="#">Flashback</a></li>
+                <li  ><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">FAQ's</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
@@ -64,6 +64,24 @@
         </div>
 
       </div>
+       <?php
+		$usename = $_POST['username'];
+		$password = $_POST['password'];
+		
+		?>
+        <div align="center" class="signIn">
+    	<form id="form1" name="form1" method="post" action="sign-in.php">
+	
+			<strong>Username : </strong><input type="text" name="username" /><br/><br/>
+            <strong>Password : </strong><input type="password" name="password"/><br/><br/>
+            <input type="submit" value="Sign In" /><br/>
+             <a href="#">Create Account</a>
+           
+            
+	
+		</form>
+        
+        </div>
    
   
 		

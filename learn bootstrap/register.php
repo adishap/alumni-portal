@@ -8,7 +8,7 @@
     <meta name="author" content="">
     
  	
-    <title>Flashback</title>
+    <title>Register</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,11 +50,11 @@
                 <li class="dropdown">
                   <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="sign-in.php">Sign In</a></li>
-                    <li><a href="register.php">Sign up</a></li>
+                    <li  ><a href="sign-in.php">Sign In</a></li>
+                    <li class="active"><a href="register.php">Sign up</a></li>
                     <li><a href="#">Update Profile</a></li></ul>
                 </li>
-                <li   class="active"><a href="#">Flashback</a></li>
+                <li  ><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">FAQ's</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
@@ -64,6 +64,35 @@
         </div>
 
       </div>
+       <?php
+		
+		?>
+        <div align="center" class="signIn">
+    	<form id="form1" name="form1" method="post" action="sign-in.php">
+	
+			<strong>First Name </strong><input type="text" name="firstName" /><br/><br/>
+            <strong>Last Name </strong><input type="text" name="lastName"/><br/><br/>
+            
+            <input type="radio" name="gender" value="male"> Male 
+			<input type="radio" name="gender" value="female"> Female<br/><br/>
+            <h4>CONTACT INFORMATION:</h4><br/>            
+            <strong>Pnone No. </strong><input type="tel" name="firstName" /><br/><br/>
+            <strong>Email id </strong><input type="email" name="email" /><br/><br/>
+            
+            <h4>Register As</h4>
+            <input type="radio" name="register" value="Alumni"> Alumni<br> 
+			<input type="radio" name="register" value="Admin"> Admin<br/> 
+			<input type="radio" name="register" value="Faculty"> Faculty<br/> 
+			<input type="radio" name="register" value="Student"> Student<br/><br/>
+            
+            <input type="submit" value="Register" /><br/>
+           
+           
+            
+	
+		</form>
+        
+        </div>
    
   
 		
