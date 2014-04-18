@@ -67,25 +67,29 @@
      <!--content here--> 
 	<?php
 	   
-	   
+	   if(isset($_POST['subject'])&&isset($_POST['from'])&&isset($_POST['body'])){
 		$to = 'someone@something.org';
 		$subject = $_POST['subject'];
 		$body = $_POST['body'];
-		$headers = 'FROM: '.$_POST['from'];
-		
-		mail($to , $subject ,$body , $headers);
-		
+		$headers = 'FROM: '.$_POST['from']; 
+		if(!empty($subject) && !empty($body) && !empty($from)){
+		 mail($to , $subject ,$body , $headers);
+		 echo "Thanks for contacting us.";
+	   }
+	   }
 	?>
      
      <h1> Contact Us</h1>
-      <div style="padding-left:30px; ">
+      <div style="padding-left:30px; " class="row">
+      <div class="col-md-offset-1 col-md-6">
      <form action="contact us.php" method="post"><strong>
       YOUR EMAIL : <br><input type="text" name="from"><br><br>
       SUBJECT : <br><input type="text" name="subject"><br><br>
       MESSAGE : <br><textarea rows="3" cols="30" name="body"></textarea><br><br>
       <input type="submit" value="SUBMIT"> </strong>       
-
      </form>
+     </div>
+     <div class="col-md-5">
      <h3 > Alumni Centre</h3>
      <p>IIPS, Davv, Takshila Campus<br>
 	Khandwa Road, Indore<br>
@@ -93,8 +97,8 @@
 	<h3>Join us on facebook</h3>
      <p><a href="https://www.facebook.com/alumni.iips?fref=ts"> Alumni Facebook page</a><br>
      </p>
-      </p>
-      </div>
+      </p></div>
+           </div>
       <!--end of content-->
 		<hr>
       <!-- FOOTER -->
