@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://getbootstrap.com/examples/carousel/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+ 	<link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+    <title>About Us</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+  <style id="holderjs-style" type="text/css"></style></head>
+<!-- NAVBAR
+================================================== -->
+  <body style="">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="home.html">Alumni Portal</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li ><a href="home.html">Home</a></li>
+                <li class="active"><a href="#">About Us</a></li>
+                
+                <li class="dropdown">
+                  <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Update Profile</a></li></ul>
+                </li>
+                <li><a href="#">Flashback</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+     <!--content here--> 
+     <div style="margin-top:90px">
+     <p><h1 style="padding-left:50px">About Us</h1><p>
+     
+     <p style="font-size:16px;padding-left:50px"> The IIPS Alumni Association exists to help you stay connected to IIPS, and to each other,wherever you are in your
+         life now. Whatever you're seeking, an excuse to come back for reunion,a job lead or a mind-expanding magazine, 
+         we've got you covered.</p>
+          <br/>
+          
+ 		 <h3 style="padding-left:50px">Services we provide:</h3>
+         <ul style="font-size:16px;padding-left:50px">
+         
+         			<li> Alumni directory  </li>
+         			<li><a href="https://www.facebook.com/alumni.iips?fref=ts"> Alumni Facebook page</a></li>
+         			<li>Comming Reunions</li>
+         			<li>Connect Your Carrier</li>
+         			<li>Alumni Centre </li>
+         		 </ul>
+         <br/> <br/>
+        <h3 style="padding-left:50px">Our Mission:</h3>
+         <ul style="font-size:16px;padding-left:50px">
+         			<li>To promote and foster belongingness and harmony between the Alumni and the Alma Mater.</li>
+					<li>To encourage formation of chapters to increase participation of the Alumni.</li>
+					<li>To encourage the Alumni to take abiding interest in the progress and development of the Alma Mater.</li>
+					<li>To undertake activities of nation building including those of charitable nature.</li>
+					<li>To undertake all such lawful activities as are conducive to the attainment of the above objectives.</li>
+					<li>To generate corpus at the Devi Ahilya University for creating better educational/recreational facilities.</li>
+					<li>To exchange professional knowledge, organize technical conferences, seminars workshops, training courses, etc.</li>
+					<li>To accept/receive donations for fulfillment of the objectives.</li>
+         </ul>
+            
+              
+     </div>
+
+		<!--end of content-->
+		<hr>
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2014 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="contact us.html">Contact Us</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./home_files/jquery.min.js"></script>
+    <script src="./home_files/bootstrap.min.js"></script>
+    <script src="./home_files/docs.min.js"></script>
+  
+
+</body></html>
