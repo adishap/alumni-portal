@@ -52,7 +52,8 @@
                   <ul class="dropdown-menu">
                     <li  class="active"><a href="sign-in.php">Sign In</a></li>
                     <li><a href="register.php">Sign up</a></li>
-                    <li><a href="#">Update Profile</a></li></ul>
+                    <li><a href="profile.php">Profile</a></li>
+                     <li><a href="#">Sign Out</a></li></ul>
                 </li>
                 <li  ><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
@@ -65,7 +66,7 @@
 
       </div>
        <?php
-	     require 'db_connect.php';
+	   require 'db_connect.php';
 		 
 	   if(isset($_POST['username'])&&isset($_POST['password'])){
 		$username = $_POST['username'];
@@ -79,8 +80,10 @@
 				 echo "Please enter a valid username and password";
 				 }
 			else  
-			{
-				echo "WELCOME!!  " . mysql_result($query_run , 0);
+			{	
+				echo "WELCOME!!  ".$username ;
+				$_SESSION['user_id']=$username;
+				header('Location: profile.php');
 				}
 			 }
 			 else echo "not working";
