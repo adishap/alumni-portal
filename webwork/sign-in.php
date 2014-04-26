@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- saved from url=(0042)http://getbootstrap.com/examples/carousel/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -53,7 +53,7 @@
                     <li  class="active"><a href="sign-in.php">Sign In</a></li>
                     <li><a href="register.php">Sign up</a></li>
                     <li><a href="profile.php">Profile</a></li>
-                     <li><a href="#">Sign Out</a></li></ul>
+                     <li><a href="sign-out.php">Sign Out</a></li></ul>
                 </li>
                 <li  ><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
@@ -72,8 +72,8 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 	   
-	   if(!empty($username)&&!empty($password)){
-		 $query = "SELECT `username` FROM `login` where `username` = '$username' AND `password` = '$password'";
+	   if(!empty($username)&&!empty($password)){"
+		 $query = "SELECT `username` FROM `login` where `username` = '".$username."' AND `password` = '".$password."'";
 		 if ($query_run = mysql_query($query)){
 			 $query_num_rows = mysql_num_rows($query_run);
 			 if ($query_num_rows == 0){
@@ -81,8 +81,10 @@
 				 }
 			else  
 			{	
-				echo "WELCOME!!  ".$username ;
-				$_SESSION['user_id']=$username;
+				$query = "SELECT `person_Id` FROM `login` where `username` = '".$username."' AND `password` = '".$password."'";
+		 		$user_id = mysql_result($query);
+				echo "WELCOME!!  ".$user_id ;
+				$_SESSION['user_id']=$user_id;
 				header('Location: profile.php');
 				}
 			 }
