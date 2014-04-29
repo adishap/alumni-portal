@@ -64,16 +64,14 @@
           </div>
         </div>
         <?php
-			require 'core.php';
-			require 'db_connect.php';
-			
-			if (logged_in())	{
-				echo 'you rock';
-				}
-				else{
-					include 'sign-in.php';
-					}	
-		?>
+			ob_start();
+			session_start();
+			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) {
+				header("location: sign-in.php");
+				exit();
+			}else
+				echo "finally";		
+							?>
 
       </div>
    		

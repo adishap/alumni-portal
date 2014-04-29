@@ -52,9 +52,13 @@
                   <ul class="dropdown-menu">
                     <li  ><a href="sign-in.php">Sign In</a></li>
                     <li class="active"><a href="register.php">Sign up</a></li>
+<<<<<<< HEAD
                     <li><a href="profile.php">Profile</a></li>
                      <li><a href="sign-out.php">Sign Out</a></li>
                      </ul>
+=======
+                    <li><a href="#">Update Profile</a></li></ul>
+>>>>>>> parent of 778a64f... logging in done
                 </li>
                 <li  ><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>

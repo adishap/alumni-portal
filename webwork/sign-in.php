@@ -54,8 +54,7 @@
                     <li><a href="register.php">Sign up</a></li>
                     <li><a href="profile.php">Profile</a></li>
                      <li><a href="sign-out.php">Sign Out</a></li></ul>
-                </li>
-                <li  ><a href="flashback.html">Flashback</a></li>
+                <li><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">FAQ's</a></li>
                 <li><a href="contact us.php">Contact Us</a></li>
@@ -66,30 +65,29 @@
 
       </div>
        <?php
-	   require 'db_connect.php';
+	     require 'db_connect.php';
+		 ob_start();
+		 session_start();
 		 
 	   if(isset($_POST['username'])&&isset($_POST['password'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 	   
-	   if(!empty($username)&&!empty($password)){"
-		 $query = "SELECT `username` FROM `login` where `username` = '".$username."' AND `password` = '".$password."'";
-		 if ($query_run = mysql_query($query)){
-			 $query_num_rows = mysql_num_rows($query_run);
-			 if ($query_num_rows == 0){
-				 echo "Please enter a valid username and password";
-				 }
-			else  
-			{	
-				$query = "SELECT `person_Id` FROM `login` where `username` = '".$username."' AND `password` = '".$password."'";
-		 		$user_id = mysql_result($query);
-				echo "WELCOME!!  ".$user_id ;
-				$_SESSION['user_id']=$user_id;
-				header('Location: profile.php');
-				}
-			 }
-			 else echo "not working";
-		   }
+	   if(!empty($username)&&!empty($password)){
+		   $query = "SELECT `person_Id` FROM `login` WHERE `username` ='".$username."' AND `password` = '".$password." ' ";
+		   if($query_run = mysql_query($query)){
+				$query_num_rows = mysql_num_rows($query_run);
+				if($query_num_rows == 0){
+					echo "Enter a valid username and password.";
+					}
+				else{
+					//$user_id = mysql_result($query_run,0,'person_Id');
+					session_regenerate_id();
+					$_SESSION['sess_user_id'] = $username;
+					session_write_close();
+					header('Location: profile.php');}		
+			   }
+		  }
 	   else 
 	     echo "Please enter username and password.";
 	    }
