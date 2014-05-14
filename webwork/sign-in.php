@@ -77,13 +77,14 @@
 		   $query = "SELECT `person_Id` FROM `login` WHERE `username` ='".$username."' AND `password` = '".$password." ' ";
 		   if($query_run = mysql_query($query)){
 				$query_num_rows = mysql_num_rows($query_run);
+				
 				if($query_num_rows == 0){
 					echo "Enter a valid username and password.";
 					}
 				else{
-					//$user_id = mysql_result($query_run,0,'person_Id');
+					$user_id = mysql_result($query_run,0,'person_Id');
 					session_regenerate_id();
-					$_SESSION['sess_user_id'] = $username;
+					$_SESSION['user_id'] = $user_id;
 					session_write_close();
 					header('Location: profile.php');}		
 			   }

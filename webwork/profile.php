@@ -66,12 +66,28 @@
         <?php
 			ob_start();
 			session_start();
-			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) {
+			require 'db_connect.php';
+			
+		
+			if(!isset($_SESSION['user_id']) || (trim($_SESSION['user_id']) == '')) {
 				header("location: sign-in.php");
 				exit();
-			}else
-				echo "finally";		
-							?>
+			}
+			else{
+				$user_id = $_SESSION['user_id'];
+		?>
+          <h1>    
+       <?php
+				echo "Welcome ".getaluminfo('first_Name','alum_personal_info')."  !!";				
+				}
+				
+				//get info from tables
+	
+	
+		
+		?></h1>
+        
+               
 
       </div>
    		

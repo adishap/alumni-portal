@@ -15,7 +15,18 @@
 	
 	if(!@mysql_connect($sql_host,$sql_user,$sql_pass) || !@mysql_select_db($sql_db)){
 		echo $err_msg;
+	}
+	
+	function getaluminfo($field, $table){
+		$query = "SELECT `$field` FROM `$table` WHERE `alum_Id` = '".$_SESSION['user_id']."' ";
+			if ($query_run = mysql_query($query))
+			{
+				if($query_result = mysql_result($query_run,0,$field)){
+					return $query_result;					
+					}
+				}
 		}
+	
 ?>
 </body>
 </html>
