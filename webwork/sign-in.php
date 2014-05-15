@@ -83,9 +83,7 @@
 					}
 				else{
 					$user_id = mysql_result($query_run,0,'person_Id');
-					session_regenerate_id();
 					$_SESSION['user_id'] = $user_id;
-					session_write_close();
 					header('Location: profile.php');}		
 			   }
 		  }

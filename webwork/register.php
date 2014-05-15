@@ -52,13 +52,9 @@
                   <ul class="dropdown-menu">
                     <li  ><a href="sign-in.php">Sign In</a></li>
                     <li class="active"><a href="register.php">Sign up</a></li>
-<<<<<<< HEAD
                     <li><a href="profile.php">Profile</a></li>
                      <li><a href="sign-out.php">Sign Out</a></li>
                      </ul>
-=======
-                    <li><a href="#">Update Profile</a></li></ul>
->>>>>>> parent of 778a64f... logging in done
                 </li>
                 <li  ><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
@@ -71,6 +67,16 @@
 
       </div>
        <?php
+	   ob_start();
+			session_start();
+			require 'db_connect.php';
+			
+		
+			if(!isset($_SESSION['user_id']) || (trim($_SESSION['user_id']) == '')) {
+				echo "Register urself";
+				}
+			else{
+				echo "You are already registered and logged in.";}
 		
 		?>
         <div align="center" class="signIn">

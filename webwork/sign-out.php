@@ -7,9 +7,9 @@
 
 <body>
 <?php
-	
-  session_destroy();
-  header('Location: sign-in.php');
+	require 'core.php';
+ if( session_destroy()){
+	 header('Location: sign-in.php');}
 	
 ?>
 </body>

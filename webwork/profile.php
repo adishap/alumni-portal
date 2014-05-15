@@ -75,7 +75,7 @@
 			}
 			else{
 				$user_id = $_SESSION['user_id'];
-		?>
+				?>
           <h1>    
        <?php
 				echo "Welcome ".getaluminfo('first_Name','alum_personal_info')."  !!";				
