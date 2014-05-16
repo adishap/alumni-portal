@@ -93,8 +93,13 @@
 					echo "Username aready exists.Enter a new username.";
 					}
 				else{
-					echo 'ok';
-					
+					$query = "INSERT INTO `alum_personal_info` (userName,first_Name,last_Name) VALUES ('$Username','$firstName','$lastName')";
+					if ($query_run = mysql_query($query)){
+						$query = "INSERT INTO `login` (userName,password) VALUES ('$Username','$Password')";
+					if ($query_run = mysql_query($query)){
+						header('Location: profile.php');}}
+						else 
+						echo "Sorry some issues occured. Your Registration failed.";
 					}
 			}else
 			 echo "Passwords do not match.";
