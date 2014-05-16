@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- saved from url=(0042)http://getbootstrap.com/examples/carousel/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <meta name="author" content="">
     
  	
-    <title>Sign-in</title>
+    <title>Profile</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,10 +50,11 @@
                 <li class="dropdown">
                   <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li  class="active"><a href="sign-in.php">Sign In</a></li>
+                    <li><a href="sign-in.php">Sign In</a></li>
                     <li><a href="register.php">Sign up</a></li>
-                    <li><a href="profile.php">Profile</a></li>
+                   <li><a href="profile.php">Profile</a></li>
                      <li><a href="sign-out.php">Sign Out</a></li></ul>
+                </li>
                 <li><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">FAQ's</a></li>
@@ -62,56 +63,29 @@
             </div>
           </div>
         </div>
+        <?php
+			ob_start();
+			session_start();
+			require 'db_connect.php';
+			
+		
+			if(!isset($_SESSION['user_id']) || (trim($_SESSION['user_id']) == '')) {
+				header("location: sign-in.php");
+				exit();
+			?>
+            <h2>
+            <?php }
+			else{
+				 echo ucfirst(getaluminfo('first_Name','admin_info'))." ".ucfirst(getaluminfo('last_Name','admin_info')). " \n ";
+				 echo "<br> Designation : ".getaluminfo('designation','admin_info');
+				 
+				 }
+		?></h2>
+        
+               
 
       </div>
-       <?php
-	     require 'db_connect.php';
-		 ob_start();
-		 session_start();
-		 
-	   if(isset($_POST['username'])&&isset($_POST['password'])){
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-	   
-	   if(!empty($username)&&!empty($password)){
-		  $query = "SELECT `userName` FROM `login` WHERE `userName` ='".$username."' AND `password` = '".$password." ' ";
-		   if($query_run = mysql_query($query)){
-				$query_num_rows = mysql_num_rows($query_run);
-				if($query_num_rows == 0){
-					echo "Enter a valid username and password.";
-					}
-				else{
-					$user_id = mysql_result($query_run,0,'userName');
-					$_SESSION['user_id'] = $user_id;
-					$query_run= mysql_query("SELECT `userName` FROM `alum_personal_info` WHERE `userName` ='$user_id'");
-					$query_num_rows = mysql_num_rows($query_run);
-				if($query_num_rows == 1)
-					header('Location: profile.php');
-					else
-					header('Location: adminprofile.php');
-					}		
-			  }
-			 else
-			   echo "query issues";
-		  }
-	   else 
-	     echo "Please enter username and password.";
-	    }
-		?>
-        <div align="center" class="signIn">
-    	<form id="form1" name="form1" method="post" action="sign-in.php">
-	
-			<strong>Username : </strong><input type="text" name="username" /><br/><br/>
-            <strong>Password : </strong><input type="password" name="password"/><br/><br/>
-            <input type="submit" value="Sign In" /><br/>
-             <a href="#">Create Account</a>
-           
-            
-	
-		</form>
-        
-        </div>
-   
+   		
   
 		
 		<hr>

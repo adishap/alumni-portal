@@ -76,14 +76,21 @@
 			else{
 				$user_id = $_SESSION['user_id'];
 				?>
-          <h1>    
+          <h2>    
        <?php
-				echo "Welcome ".getaluminfo('first_Name','alum_personal_info')."  !!";				
-				}
-				
-				
+			echo "Welcome ".getaluminfo('first_Name','alum_personal_info')." ".getaluminfo('last_Name','alum_personal_info')."  !!";
+		?></h2>
+        <h4>
+       <?php
+             echo ucfirst(getaluminfo('first_Name','alum_personal_info'))." ".ucfirst(getaluminfo('last_Name','alum_personal_info')). " \n ";	
+			 echo "<br> Course : ".getaluminfo('course','alum_coll_info');	
+			 echo "<br>Year Of Passing : ".getaluminfo('year_Of_Passing','alum_coll_info');	
+			 echo "<br> Phone no: ";
+		?>
+        <?php
 		
-		?></h1>
+			}
+		?></h4>
         
                
 
