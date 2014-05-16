@@ -68,44 +68,78 @@
       </div>
        <?php
 	   ob_start();
-			session_start();
-			require 'db_connect.php';
+		session_start();
+		require 'db_connect.php';
 			
 		
-			if(!isset($_SESSION['user_id']) || (trim($_SESSION['user_id']) == '')) {
-				echo "Register urself";
-				}
-			else{
-				echo "You are already registered and logged in.";}
-		
+		if(!isset($_SESSION['user_id']) || (trim($_SESSION['user_id']) == '')) {
+			if(isset($_POST['firstName'])&&isset($_POST['lastName'])&&isset($_POST['Username'])&&isset($_POST['re_pass'])&&isset($_POST['password'])/*
+			&&isset($_POST['gender'])&&isset($_POST['phoneno'])&&isset($_POST['email'])&&isset($_POST['register'])*/){
+				$firstName = $_POST['firstName'];
+				$lastName = $_POST['lastName'];
+				$Username = $_POST['Username'];
+				$Password= $_POST['password'];
+				$repass = $_POST['re_pass'];
+				/*$gender = $_POST['gender'];
+				$phone = $_POST['phoneNo'];
+				$mail = $_POST['email'];
+				$register = $_POST['register'];*/
+		if(!empty($firstName)&&!empty($lastName)&&!empty($Username)&&!empty($Password)&&!empty($repass)/*&&!empty($gender)&&!empty($phone)&&!empty($mail)*/	
+		){
+			if($Password == $repass){
+				$query = "SELECT `userName` FROM `login` WHERE `userName`='$Username'";
+				$query_run= mysql_query($query);
+				if(mysql_num_rows($query_run)>=1){
+					echo "Username aready exists.Enter a new username.";
+					}
+				else{
+					echo 'ok';
+					
+					}
+			}else
+			 echo "Passwords do not match.";
+			}
+			else
+			   echo "All entries are required.";
+				}else
+				echo "Fill up the form.";		
 		?>
         <div align="center" class="signIn">
-    	<form id="form1" name="form1" method="post" action="sign-in.php">
+    	<form id="form1" name="form1" method="post" action="register.php">
 	
-			<strong>First Name </strong><input type="text" name="firstName" /><br/><br/>
-            <strong>Last Name </strong><input type="text" name="lastName"/><br/><br/>
+			<strong>First Name </strong><input type="text" name="firstName"/><br/><br/>
+            <strong>Last Name </strong><input type="text" name="lastName"/><br/><br/><br/>
             
+            <strong>Username</strong><input type="text" name="Username"/><br/><br/>
+            <strong>New Password</strong><input type="password" name="password"/><br/><br/>
+            <strong>Retype password</strong><input type="password" name="re_pass"/><br/><br/><br/>
+            <!--
             <input type="radio" name="gender" value="male"> Male 
-			<input type="radio" name="gender" value="female"> Female<br/><br/>
+			<input type="radio" name="gender" value="female"> Female<br/><br/><br/>
             <h4>CONTACT INFORMATION:</h4><br/>            
-            <strong>Pnone No. </strong><input type="tel" name="firstName" /><br/><br/>
-            <strong>Email id </strong><input type="email" name="email" /><br/><br/>
+            <strong>Pnone No. </strong><input type="tel" name="Phoneno" /><br/><br/>
+            <strong>Email id </strong><input type="email" name="email" /><br/><br/><br/>
             
             <h4>Register As</h4>
             <input type="radio" name="register" value="Alumni"> Alumni<br> 
 			<input type="radio" name="register" value="Admin"> Admin<br/> 
 			<input type="radio" name="register" value="Faculty"> Faculty<br/> 
 			<input type="radio" name="register" value="Student"> Student<br/><br/>
-            
+            -->
             <input type="submit" value="Register" /><br/>
-           
-           
-            
-	
-		</form>
+         </form>
         
         </div>
    
+        
+        
+		<?php
+			}
+		     else{
+				echo "You are already registered and logged in.";}
+		
+		?>
+          
   
 		
 		<hr>

@@ -18,7 +18,7 @@
 	}
 	
 	function getaluminfo($field, $table){
-		$query = "SELECT `$field` FROM `$table` WHERE `alum_Id` = '".$_SESSION['user_id']."' ";
+		$query = "SELECT `$field` FROM `$table` WHERE `userName` = '".$_SESSION['user_id']."' ";
 			if ($query_run = mysql_query($query))
 			{
 				if($query_result = mysql_result($query_run,0,$field)){

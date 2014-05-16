@@ -74,18 +74,21 @@
 		$password = $_POST['password'];
 	   
 	   if(!empty($username)&&!empty($password)){
-		   $query = "SELECT `person_Id` FROM `login` WHERE `username` ='".$username."' AND `password` = '".$password." ' ";
+		  $query = "SELECT `userName` FROM `login` WHERE `userName` ='".$username."' AND `password` = '".$password." ' ";
 		   if($query_run = mysql_query($query)){
 				$query_num_rows = mysql_num_rows($query_run);
-				
 				if($query_num_rows == 0){
 					echo "Enter a valid username and password.";
 					}
 				else{
-					$user_id = mysql_result($query_run,0,'person_Id');
+					$user_id = mysql_result($query_run,0,'userName');
 					$_SESSION['user_id'] = $user_id;
-					header('Location: profile.php');}		
-			   }
+					echo $_SESSION['user_id'];
+					header('Location: profile.php');
+					}		
+			  }
+			 else
+			   echo "query issues";
 		  }
 	   else 
 	     echo "Please enter username and password.";

@@ -81,9 +81,7 @@
 				echo "Welcome ".getaluminfo('first_Name','alum_personal_info')."  !!";				
 				}
 				
-				//get info from tables
-	
-	
+				
 		
 		?></h1>
         
