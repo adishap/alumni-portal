@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2014 at 07:48 PM
+-- Generation Time: May 17, 2014 at 07:23 AM
 -- Server version: 5.5.36
 -- PHP Version: 5.4.25
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `admin_info` (
 --
 
 INSERT INTO `admin_info` (`userName`, `first_Name`, `last_Name`, `designation`, `mail_Id`, `phone_No`) VALUES
-('admin-01', 'adisha', 'porwal', 'student', 'porwaladisha@gmail.com', '9406651140');
+('admin-01', 'adisha', 'porwal', 'student', 'porwaladisha@gmail.com', '9425054947');
 
 -- --------------------------------------------------------
 
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `alum_personal_info` (
 --
 
 INSERT INTO `alum_personal_info` (`userName`, `first_Name`, `last_Name`, `gender`, `date_Birth`, `blood_Group`, `martial_Status`, `road_Area`, `city`, `pin_Code`, `country`, `country_Code`, `email_Id`, `phone_no`) VALUES
-('mohitg', 'mohit', 'garg', 'male', '1990-04-01', '', 'unmarried', '', 'indore', '', 'india', '', '', '');
+('mohitg', 'mohit', 'garg', 'male', '1990-04-01', '', 'unmarried', '', 'indore', '', 'india', '', '', '9405');
 
 -- --------------------------------------------------------
 
@@ -231,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`userName`, `password`) VALUES
 ('admin-01', 'pass123'),
-('mohitg', 'mohit12');
+('mohitg', 'mohit1');
 
 -- --------------------------------------------------------
 

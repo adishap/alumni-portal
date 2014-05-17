@@ -27,6 +27,16 @@
 				}
 		}
 	
+	function updateinfo($field, $table ,$value){
+		$query = "UPDATE `$table` SET `$field` = $value WHERE `userName` = '".$_SESSION['user_id']."' ";
+			if ($query_run = mysql_query($query))
+			{
+				echo "Details updated.";
+				}
+			else echo"Problem Occured";
+		}
+	
+	
 ?>
 </body>
 </html>

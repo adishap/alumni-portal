@@ -56,7 +56,7 @@
                     </ul>
                 <li><a href="flashback.html">Flashback</a></li>
                 <li><a href="#">Events</a></li>
-                <li><a href="#">FAQ's</a></li>
+                <li><a href="faq.html">FAQ's</a></li>
                 <li  class="active"><a href="contact us.php">Contact Us</a></li>
               </ul>
             </div>
@@ -105,7 +105,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>© 2014 Company, Inc. · <a href="home.html">Home</a> · <a href="about us.html">About us</a> · <a href="#">My Accounts</a> · <a href="#">Events</a>  · <a href="flashback.html">Flashback</a>  · <a href="#">FAQs</a> · <a href="contact us.html">Contact Us</a></p>
+        <p>© 2014 Company, Inc. · <a href="home.html">Home</a> · <a href="about us.html">About us</a> · <a href="#">My Accounts</a> · <a href="#">Events</a>  · <a href="flashback.html">Flashback</a>  · <a href="faq.html">FAQs</a> · <a href="contact us.html">Contact Us</a></p>
       </footer>
     </div><!-- /.container -->
 
